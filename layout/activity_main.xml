@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="89dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/actv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="72dp"
+        android:dropDownHeight="100dp"
+        android:hint="@string/choose_degree"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textColorHint="#606166"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageDownArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/actv1"
+        android:layout_alignEnd="@id/actv1"
+        android:layout_alignBottom="@id/actv1"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="21dp"
+        android:padding="5dp"
+        android:src="@mipmap/baseline_arrow_drop_down_black_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/actv1"
+        app:layout_constraintTop_toTopOf="@+id/actv1" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:dropDownHeight="230dp"
+        android:hint="@string/choose_country"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textColorHint="#606166"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/actv1"
+        app:layout_constraintStart_toStartOf="@+id/actv1"
+        app:layout_constraintTop_toBottomOf="@+id/actv1" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageDownArrow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/actv1"
+        android:layout_alignEnd="@id/actv1"
+        android:layout_alignBottom="@id/actv1"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:padding="5dp"
+        android:src="@mipmap/baseline_arrow_drop_down_black_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/actv2"
+        app:layout_constraintTop_toTopOf="@+id/actv2" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:dropDownHeight="230dp"
+        android:hint="@string/choose_major"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHint="#606166"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/actv2"
+        app:layout_constraintStart_toStartOf="@+id/actv2"
+        app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageDownArrow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/actv2"
+        android:layout_alignEnd="@id/actv2"
+        android:layout_alignBottom="@id/actv2"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:padding="5dp"
+        android:src="@mipmap/baseline_arrow_drop_down_black_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/actv3"
+        app:layout_constraintTop_toTopOf="@+id/actv3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="86dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="findButtonClicked"
+        android:text="@string/find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actv3" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCircular"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/CircularProgress"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3"
+        android:paddingTop="1dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="12dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="casual"
+        android:text="@string/or"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actv2" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-1527451245058524/6796167438"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/webview"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="chatFabClicked"
+        android:src="@drawable/ic_chat_black_24dp"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_constraintBottom_toBottomOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView" />
+
+
+</android.support.constraint.ConstraintLayout>
